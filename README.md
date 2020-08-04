@@ -31,3 +31,30 @@ To run a image in a Kubernetes cluster,
 
     Create configuration file to start up our container - client-pod.yaml
     To setup the networking - client-node-port.yaml
+
+    To feed the config file to Kubectl
+        ``` kubectl apply -f <filename> ```
+    
+    To check status of the pod
+        ```sudo kubectl get pods```
+
+    To check status of the services
+        ```sudo kubectl get services```
+
+    to get the IP of the host
+        ```sudo minikube ip```
+
+### Takeaways
+    - Kubernetes is a system to deploy containerized apps
+    - Nodes are individual machines that run containers
+    - Masters are machines with a set of programs to manage node
+    - Kubernetes dont build images
+    - The master decides where to run each container - each node can run a dissimilar set of container
+    - To deploy something we update the desired state of the master with a config
+    - The master works constantly to meet the desired state.
+
+Two types of deployments:
+    Imperative Deployments - Do exactly as the steps are provided to arrive at this container setup. Have to come up with all the steps for each state.
+    Declaritive Deployment - Tell Kubernetes what needs to done. 
+
+
