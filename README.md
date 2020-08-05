@@ -34,6 +34,9 @@ To run a image in a Kubernetes cluster,
 
     To feed the config file to Kubectl
         ``` kubectl apply -f <filename> ```
+
+    To delete the object:
+        ```sudo kubectl delete -f <config file>```
     
     To check status of the pod
         ```sudo kubectl get pods```
@@ -43,6 +46,9 @@ To run a image in a Kubernetes cluster,
 
     to get the IP of the host
         ```sudo minikube ip```
+
+    To get detailed info of the object
+        ```sudo kubectl describe Pod client-pod```
 
 ### Takeaways
     - Kubernetes is a system to deploy containerized apps
@@ -56,5 +62,9 @@ To run a image in a Kubernetes cluster,
 Two types of deployments:
     Imperative Deployments - Do exactly as the steps are provided to arrive at this container setup. Have to come up with all the steps for each state.
     Declaritive Deployment - Tell Kubernetes what needs to done. 
+
+Things we can update in the yaml file:
+
+    We can update the image and any image related stuff in the yaml file. We cannot update the port detauls or anything related to the Pod.
 
 
