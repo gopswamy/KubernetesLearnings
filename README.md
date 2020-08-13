@@ -50,6 +50,9 @@ To run a image in a Kubernetes cluster,
     To get detailed info of the object
         ```sudo kubectl describe Pod client-pod```
 
+    To create a Secret Object
+        ```sudo kubectl create secret generic <secret_name> --from-literal key=value```
+
 ### Takeaways
     - Kubernetes is a system to deploy containerized apps
     - Nodes are individual machines that run containers
